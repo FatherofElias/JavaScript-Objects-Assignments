@@ -28,13 +28,6 @@ function searchByAuthor(author) {
     return library.filter(book => book.author.toLowerCase().includes(author.toLowerCase()));
 }
 
-// Example usage:
-addBook('To Kill a Mockingbird', 'Harper Lee', 281);
-addBook('1984', 'George Orwell', 328);
-
-console.log(searchByTitle('1984'));
-console.log(searchByAuthor('Harper Lee'));
-
 // Task 4
 // Function to filter out books with more than 100 pages
 function filterBooksByPageCount(library) {
@@ -52,7 +45,7 @@ function formatBooks(library) {
     });
 }
 
-// Example usage:
+
 addBook('To Kill a Mockingbird', 'Harper Lee', 281);
 addBook('The Little Prince', 'Antoine de Saint-Exupéry', 96);
 addBook('1984', 'George Orwell', 328);
@@ -62,3 +55,5 @@ const formattedBooks = formatBooks(library);
 
 console.log(filteredBooks);
 console.log(formattedBooks);
+console.log(searchByTitle('1984'));
+console.log(searchByAuthor('Harper Lee'));
