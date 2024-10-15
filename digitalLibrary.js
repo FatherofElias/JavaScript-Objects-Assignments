@@ -34,3 +34,31 @@ addBook('1984', 'George Orwell', 328);
 
 console.log(searchByTitle('1984'));
 console.log(searchByAuthor('Harper Lee'));
+
+// Task 4
+// Function to filter out books with more than 100 pages
+function filterBooksByPageCount(library) {
+    return library.filter(book => book.pages > 100);
+}
+
+// Function to add "Title: " and "Author: " to the book's title and author
+function formatBooks(library) {
+    return library.map(book => {
+        return {
+            title: `Title: ${book.title}`,
+            author: `Author: ${book.author}`,
+            pages: book.pages
+        };
+    });
+}
+
+// Example usage:
+addBook('To Kill a Mockingbird', 'Harper Lee', 281);
+addBook('The Little Prince', 'Antoine de Saint-Exupéry', 96);
+addBook('1984', 'George Orwell', 328);
+
+const filteredBooks = filterBooksByPageCount(library);
+const formattedBooks = formatBooks(library);
+
+console.log(filteredBooks);
+console.log(formattedBooks);
